@@ -1,0 +1,29 @@
+//HEADER
+
+class Class {
+
+public:
+	Class();
+	Class(const Class &src);
+	~Class();
+	Class		&operator=(const Class &rhs);
+}
+
+// CPP file
+
+Class::Class() {
+}
+
+Class::Class(const Class &rhs) {
+}
+
+Class::~Class() {
+}
+
+Class	&Class::operator=(const Class &src) {
+
+	return (*this);
+}
+
+
+$ clang++ -Wall -Wextra -Werror 
