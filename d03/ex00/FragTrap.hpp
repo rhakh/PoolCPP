@@ -5,19 +5,19 @@
 #include <iostream>
 
 class FragTrap {
-
-	const int		hitPoints;
-	const int		maxHitPoints;
-	const int		energyPoints;
-	const int		maxEnergyPoints;
-	const int		level;
-	std::string		name;
-	const int		meleeAttackRange;
-	const int		rangedAttackReduction;
-	const int		armorDamageReduction;
+	int			hitPoints;
+	int			maxHitPoints;
+	int			energyPoints;
+	int			maxEnergyPoints;
+	int			level;
+	std::string	name;
+	int			meleeAttackDamage;
+	int			rangedAttackDamage;
+	int			armorDamageReduction;
 
 public:
 	FragTrap();
+	FragTrap(const std::string &_name);
 	FragTrap(const FragTrap &src);
 	~FragTrap();
 	FragTrap		&operator=(const FragTrap &rhs);
@@ -26,8 +26,9 @@ public:
 	void 	meleeAttack(const std::string &target);
 	void 	tackeDamage(const std::string &target);
 	void 	beRepaired(unsigned int amount);
+	void	vaulthunter_dot_exe(const std::string &target);
 
-	std::string		&getName() const;
+	std::string		getName() const;
 };
 
 #endif //FRAG_TRAP_HPP
