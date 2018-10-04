@@ -22,8 +22,8 @@ public:
 
 	int			toInt() const;
 	float		toFloat() const;
-
-	friend std::ostream	&operator<<(std::ostream &os, const Fixed &dt);
 };
+
+std::ostream	&operator<<(std::ostream &os, const Fixed &dt);
 
 #endif // FIXED_HPP

@@ -23,7 +23,6 @@ public:
 	int			toInt() const;
 	float		toFloat() const;
 
-	friend std::ostream	&operator<<(std::ostream &os, const Fixed &dt);
 	bool	operator<(const Fixed &b) const;
 	bool	operator>(const Fixed &b) const;
 	bool	operator>=(const Fixed &b) const;
@@ -46,5 +45,7 @@ public:
 	static	Fixed		&max(Fixed &lhs, Fixed &rhs);
 	static	const Fixed	&max(const Fixed &lhs, const Fixed &rhs);
 };
+
+std::ostream	&operator<<(std::ostream &os, const Fixed &dt);
 
 #endif // FIXED_HPP
