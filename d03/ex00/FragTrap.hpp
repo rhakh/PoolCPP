@@ -24,7 +24,7 @@ public:
 
 	void 	rangedAttack(const std::string &target);
 	void 	meleeAttack(const std::string &target);
-	void 	tackeDamage(const std::string &target);
+	void 	tackeDamage(unsigned int amount);
 	void 	beRepaired(unsigned int amount);
 	void	vaulthunter_dot_exe(const std::string &target);
 
