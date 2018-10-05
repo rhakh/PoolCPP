@@ -1,26 +1,36 @@
 #include "FragTrap.hpp"
 
-FragTrap::FragTrap() :
-hitPoints(100), maxHitPoints(100), energyPoints(100),
-maxEnergyPoints(100), level(1), meleeAttackDamage(30),
-rangedAttackDamage(20), armorDamageReduction(5)
+FragTrap::FragTrap() : ClapTrap()
 {
+	this->hitPoints = 100;
+	this->maxHitPoints = 100;
+	this->energyPoints = 100;
+	this->maxEnergyPoints = 100;
+	this->level = 1;
+	this->meleeAttackDamage = 30;
+	this->rangedAttackDamage = 20;
+	this->armorDamageReduction = 5;
 	this->name = "noname_FragTrap";
 	std::cout << "FR4G-TP<" << this->name
 				<< ">: OMG, I'm default." << std::endl;
 }
 
-FragTrap::FragTrap(const std::string &_name) :
-hitPoints(100), maxHitPoints(100), energyPoints(100),
-maxEnergyPoints(100), level(1), meleeAttackDamage(30),
-rangedAttackDamage(20), armorDamageReduction(5)
+FragTrap::FragTrap(const std::string &_name) : ClapTrap(_name)
 {
+	this->hitPoints = 100;
+	this->maxHitPoints = 100;
+	this->energyPoints = 100;
+	this->maxEnergyPoints = 100;
+	this->level = 1;
+	this->meleeAttackDamage = 30;
+	this->rangedAttackDamage = 20;
+	this->armorDamageReduction = 5;
 	this->name = _name;
 	std::cout << "FR4G-TP<" << this->name
 				<< ">: I'am alive !!!" << std::endl;
 }
 
-FragTrap::FragTrap(const FragTrap &rhs)
+FragTrap::FragTrap(const FragTrap &rhs) : ClapTrap(rhs)
 {
 	*this = rhs;
 	std::cout << "FR4G-TP<" << this->name
@@ -47,11 +57,6 @@ FragTrap	&FragTrap::operator=(const FragTrap &src)
 	std::cout << "FR4G-TP<" << this->name
 				<< ">: *copy created*" << std::endl;
 	return (*this);
-}
-
-std::string		FragTrap::getName() const
-{
-	return (this->name);
 }
 
 void 	FragTrap::rangedAttack(const std::string &target)

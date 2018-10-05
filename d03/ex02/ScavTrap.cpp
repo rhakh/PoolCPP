@@ -1,26 +1,36 @@
 #include "ScavTrap.hpp"
 
-ScavTrap::ScavTrap() :
-hitPoints(100), maxHitPoints(100), energyPoints(50),
-maxEnergyPoints(50), level(1), meleeAttackDamage(20),
-rangedAttackDamage(15), armorDamageReduction(3)
+ScavTrap::ScavTrap() : ClapTrap()
 {
+	this->hitPoints = 100;
+	this->maxHitPoints = 100;
+	this->energyPoints = 50;
+	this->maxEnergyPoints = 50;
+	this->level = 1;
+	this->meleeAttackDamage = 20;
+	this->rangedAttackDamage = 15;
+	this->armorDamageReduction = 3;
 	this->name = "noname_ScavTrap";
 	std::cout << "SC4V-TP<" << this->name
 				<< ">: dafault, shit !" << std::endl;
 }
 
-ScavTrap::ScavTrap(const std::string &_name) :
-hitPoints(100), maxHitPoints(100), energyPoints(50),
-maxEnergyPoints(50), level(1), meleeAttackDamage(20),
-rangedAttackDamage(15), armorDamageReduction(3)
+ScavTrap::ScavTrap(const std::string &_name) : ClapTrap(_name)
 {
+	this->hitPoints = 100;
+	this->maxHitPoints = 100;
+	this->energyPoints = 50;
+	this->maxEnergyPoints = 50;
+	this->level = 1;
+	this->meleeAttackDamage = 20;
+	this->rangedAttackDamage = 15;
+	this->armorDamageReduction = 3;
 	this->name = _name;
 	std::cout << "SC4V-TP<" << this->name
 				<< ">: I was born, right now." << std::endl;
 }
 
-ScavTrap::ScavTrap(const ScavTrap &rhs)
+ScavTrap::ScavTrap(const ScavTrap &rhs) : ClapTrap(rhs)
 {
 	*this = rhs;
 	std::cout << "SC4V-TP<" << this->name
@@ -47,11 +57,6 @@ ScavTrap	&ScavTrap::operator=(const ScavTrap &src)
 	std::cout << "SC4V-TP<" << this->name
 				<< ">: *copy created*" << std::endl;
 	return (*this);
-}
-
-std::string		ScavTrap::getName() const
-{
-	return (this->name);
 }
 
 void 	ScavTrap::rangedAttack(const std::string &target)

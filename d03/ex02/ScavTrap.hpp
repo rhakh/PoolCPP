@@ -3,17 +3,9 @@
 
 #include <string>
 #include <iostream>
+#include "ClapTrap.hpp"
 
-class ScavTrap {
-	int			hitPoints;
-	int			maxHitPoints;
-	int			energyPoints;
-	int			maxEnergyPoints;
-	int			level;
-	std::string	name;
-	int			meleeAttackDamage;
-	int			rangedAttackDamage;
-	int			armorDamageReduction;
+class ScavTrap : public ClapTrap {
 
 public:
 	ScavTrap();
@@ -27,8 +19,6 @@ public:
 	void 	tackeDamage(unsigned int amount);
 	void 	beRepaired(unsigned int amount);
 	void	challangeNewcomer();
-
-	std::string		getName() const;
 };
 
 #endif //SCAV_TRAP_HPP

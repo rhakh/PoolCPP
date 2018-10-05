@@ -74,7 +74,7 @@ void 	FragTrap::tackeDamage(unsigned int amount)
 {
 	if (this->hitPoints == 0) {
 		std::cout << "FR4G-TP<" << this->name
-					<< ">: I can't get anu more damage"
+					<< ">: I can't get any more damage"
 					<< std::endl;
 	} else if ((int)amount <= this->armorDamageReduction) {
 		std::cout << "FR4G-TP<" << this->name
