@@ -4,6 +4,8 @@
 #include <string>
 
 class AWeapon {
+
+protected:
 	std::string		name;
 	int				apcost;
 	int				damage;

@@ -6,6 +6,7 @@
 
 class Enemy {
 
+protected:
 	int				hp;
 	std::string		type;
 
