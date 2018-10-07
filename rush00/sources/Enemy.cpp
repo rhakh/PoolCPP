@@ -27,6 +27,7 @@ Enemy   &Enemy::operator=(const Enemy &src)
 
 int     Enemy::processMove(int frn, int pressCode) {
     int random = rand() % 100;
+    int ret;
 
     if (frn % 2 == 0)
         return (0);
@@ -42,7 +43,10 @@ int     Enemy::processMove(int frn, int pressCode) {
             this->y++;
     }
 
+    ret = Object::processMove(frn, pressCode);
+    if (ret)
+        return (ret);
     if (random < 3)
         return (ENEMY_SHOT);
-    return (Object::processMove(frn, pressCode));
+    return (0);
 }

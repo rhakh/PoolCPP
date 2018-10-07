@@ -30,6 +30,7 @@ Boss   &Boss::operator=(const Boss &src)
 
 int     Boss::processMove(int frn, int pressCode) {
     int random = rand() % 100;
+    int ret;
 
     if (frn % 2 == 0)
         return (0);
@@ -45,8 +46,9 @@ int     Boss::processMove(int frn, int pressCode) {
             this->y++;
     }
 
-    Object::processMove(frn, pressCode);
-
+    ret = Object::processMove(frn, pressCode);
+    if (ret)
+        return (ret);
     if (random < 3)
         return (ENEMY_SHOT);
     return (0);

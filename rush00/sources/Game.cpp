@@ -256,13 +256,13 @@ int		Game::checkObjects(Object *obj1, Object *obj2) {
 		return (0);
 
 	if (form1 == PLAYER_SHAPE && form2 == BULLET_SHAPE &&
-		obj2->getDirection() == -1 && (x1 == x2))
+		obj2->getDirection() == BACKWARD_DIRECT && (x1 == x2))
 		return (1);
 	else if (form1 == BULLET_SHAPE && (form2 == ENEMY_SHAPE || form2 == BOSS_SHAPE) &&
-		obj1->getDirection() == 1 && ((x2 - x1 == 1) || (x2 == x1)))
+		obj1->getDirection() == FORWARD_DIRECT && ((x2 - x1 == 1) || (x2 == x1)))
 		return (1);
 	else if (form2 == BULLET_SHAPE && (form1 == ENEMY_SHAPE || form1 == BOSS_SHAPE) &&
-		obj2->getDirection() == 1 && ((x1 - x2 == 1) || (x2 == x1)))
+		obj2->getDirection() == FORWARD_DIRECT && ((x1 - x2 == 1) || (x2 == x1)))
 		return (1);
 	else if (form1 == PLAYER_SHAPE && (form2 == ENEMY_SHAPE || form2 == BOSS_SHAPE) &&
 		(x1 == x2))
