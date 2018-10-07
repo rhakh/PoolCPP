@@ -171,6 +171,29 @@ void	Game::printWindow()
 	node_t				*curr, *next;
 	Object				*obj;
 
+	getmaxyx(stdscr, win_height, win_length);
+
+	pl_height = win_height - 3;
+	pl_length = win_length;
+
+	dt_height = DATA_WIN_HEIGHT;
+	dt_length = win_length;
+
+	if (win)
+		delwin(win);
+	win = newwin(pl_height, pl_length, PL_START_Y, PL_START_X);
+	if (win == NULL)
+		throw OutOfMemoryException();
+
+	if (data_win)
+		delwin(data_win);
+	data_win = newwin(dt_height, dt_length, pl_height, DT_START_X);
+	if (data_win == NULL)
+		throw OutOfMemoryException();
+
+	wborder(win, 0, 0, 0, 0, 0, 0, 0, 0);
+	wborder(data_win, 0, 0, 0, 0, 0, 0, 0, 0);
+
 	curr = this->list;
 	while (curr)
 	{

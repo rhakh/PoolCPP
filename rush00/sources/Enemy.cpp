@@ -39,7 +39,7 @@ int     Enemy::processMove(int frn, int pressCode) {
             this->y--;
     } else if (random >= 3 && random < 5)
     {
-        if (this->y + 1 < pl_height)
+        if (this->y + 2 < pl_height)
             this->y++;
     }
 
