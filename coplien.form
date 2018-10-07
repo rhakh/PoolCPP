@@ -1,4 +1,6 @@
 //HEADER
+#ifndef CLASS_HPP
+#define CLASS_HPP
 
 class Class {
 
@@ -8,6 +10,8 @@ public:
 	~Class();
 	Class		&operator=(const Class &rhs);
 }
+
+#endif // CLASS_HPP
 
 // CPP file
 

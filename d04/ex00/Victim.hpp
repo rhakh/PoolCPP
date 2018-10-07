@@ -6,6 +6,8 @@
 #include <ostream>
 
 class Victim {
+
+protected:
 	std::string		name;
 
 public:

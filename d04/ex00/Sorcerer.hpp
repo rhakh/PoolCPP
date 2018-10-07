@@ -20,7 +20,7 @@ public:
 	std::string 	getName() const;
 	std::string 	getTitle() const;
 	void			polymorph(const Victim &src) const;
-	void			polymorph(const Peon &src) const;
+	// void			polymorph(const Peon &src) const;
 };
 
 std::ostream	&operator<<(std::ostream &os, const Sorcerer &src);

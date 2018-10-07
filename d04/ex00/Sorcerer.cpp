@@ -40,6 +40,6 @@ void		Sorcerer::polymorph(const Victim &src) const {
 	src.getPolymorphed();
 }
 
-void		Sorcerer::polymorph(const Peon &src) const {
-	src.getPolymorphed();
-}
+// void		Sorcerer::polymorph(const Peon &src) const {
+// 	src.getPolymorphed();
+// }

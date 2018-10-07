@@ -8,7 +8,6 @@
 #include "Victim.hpp"
 
 class Peon : public Victim {
-	std::string		name;
 
 public:
 	Peon(std::string _name);

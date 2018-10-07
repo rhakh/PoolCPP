@@ -6,20 +6,19 @@ NAME = ft_retro
 
 FLAGS =  -Wall -Wextra -Werror
 
-OBJDIR = obj/
+OBJDIR = objects/
 
-SRCDIR = src/
+SRCDIR = sources/
 
-_SRC =	Element.cpp \
-		Game.cpp \
-		main.cpp \
-		Player.cpp \
-		Bullet.cpp \
-		element_node.cpp \
+_SRC =	Boss.cpp \
 		Enemy.cpp \
-		Boss.cpp \
-		Background.cpp \
-		HealthItem.cpp \
+		Game.cpp \
+		HPObject.cpp \
+		main.cpp \
+		node_t.cpp \
+		Object.cpp \
+		Player.cpp \
+		Star.cpp \
 
 SRC = $(addprefix $(SRCDIR), $(_SRC))
 
