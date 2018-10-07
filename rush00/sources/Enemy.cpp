@@ -1,11 +1,13 @@
 #include "Enemy.hpp"
 
-Enemy::Enemy() : Object()
+Enemy::Enemy() :
+Object(ENEMY_COLOUR, BACKWARD_DIRECT, ENEMY_SHAPE, 0, 0, DEF_HP)
 {
 
 }
 
-Enemy::Enemy(int x_, int y_) : Object(x_, y_)
+Enemy::Enemy(int x_, int y_) :
+Object(ENEMY_COLOUR, BACKWARD_DIRECT, ENEMY_SHAPE, x_, y_, DEF_HP)
 {
     
 }

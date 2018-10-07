@@ -12,7 +12,7 @@ int dt_height = 0;
 int dt_length = 0;
 int win_height = 0;
 int win_length = 0;
-unsigned fps = 0;
+unsigned fps = FPS;
 
 TermWinTooSmallException::TermWinTooSmallException() {}
 
@@ -80,9 +80,9 @@ int		main(void) {
 	res = initGame();
 
 	if (!res.exitCode)
-		std::cout << "*** GAME OVER ***" << std::endl;
-	else
 		std::cout << "*** GAME CLOSED ***" << std::endl;
+	else
+		std::cout << "*** GAME OVER ***" << std::endl;
 	std::cout << "Score: " << res.score
 					<< ", Time played (sec): " << res.time << std::endl;
 	return (0);

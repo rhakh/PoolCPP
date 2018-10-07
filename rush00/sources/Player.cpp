@@ -1,11 +1,13 @@
 #include "Player.hpp"
 
-Player::Player() : Object()
+Player::Player() :
+Object(PLAYER_COLOUR, BACKWARD_DIRECT, PLAYER_SHAPE, 0, 0, PLAYER_HP)
 {
 
 }
 
-Player::Player(int x_, int y_) : Object(x_, y_)
+Player::Player(int x_, int y_) :
+Object(PLAYER_COLOUR, BACKWARD_DIRECT, PLAYER_SHAPE, x_, y_, PLAYER_HP)
 {
     
 }

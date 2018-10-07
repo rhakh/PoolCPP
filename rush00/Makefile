@@ -19,6 +19,7 @@ _SRC =	Boss.cpp \
 		Object.cpp \
 		Player.cpp \
 		Star.cpp \
+		Bullet.cpp \
 
 SRC = $(addprefix $(SRCDIR), $(_SRC))
 

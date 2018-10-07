@@ -15,6 +15,7 @@
 #include "Boss.hpp"
 #include "HPObject.hpp"
 #include "Star.hpp"
+#include "Bullet.hpp"
 
 class Game {
 
@@ -22,10 +23,10 @@ class Game {
 	WINDOW	*data_win;
 	node_t	*list;
 
-	int		pressCode;
-	int		score;
-	int		isPaused;
-	int		frameNumber;
+	int			pressCode;
+	int			score;
+	int			isPaused;
+	unsigned	frameNumber;
 
 	void	processMoves();
 	void	printWindow();

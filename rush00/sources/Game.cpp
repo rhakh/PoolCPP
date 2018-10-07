@@ -132,12 +132,12 @@ void	Game::processMoves() {
 		switch (code) {
 			case PLAYER_SHOT : {
 					/* Player pressed space */
-					// node_add_tail(
-					// 	node_new(
-					// 		new Bullet(obj->getY(), obj->getX() + 1, 1)
-					// 	),
-					// 	this->list
-					// );
+					node_add_tail(
+						node_new(
+							new Bullet(obj->getY(), obj->getX() + 1, 1)
+						),
+						this->list
+					);
 				}
 				break ;
 			case OBJECT_REACH_LEFT_SIDE :
@@ -149,12 +149,12 @@ void	Game::processMoves() {
 				}
 				break ;
 			case ENEMY_SHOT : {
-					// node_add_tail(
-					// 	node_new(
-					// 		new Bullet(obj->getY(), obj->getX() - 1, -1)
-					// 	),
-					// 	this->list
-					// );
+					node_add_tail(
+						node_new(
+							new Bullet(obj->getY(), obj->getX() - 1, -1)
+						),
+						this->list
+					);
 				}
 				break ;
 		}

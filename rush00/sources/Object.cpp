@@ -51,6 +51,13 @@ shape(DEF_SHAPE), x(x_), y(y_), hp(DEF_HP)
 
 }
 
+Object::Object(int colour_, int direction_, char shape_, int x_, int y_, int hp_) :
+colour(colour_), direction(direction_),
+shape(shape_), x(x_), y(y_), hp(hp_)
+{
+
+}
+
 Object::Object(const Object &src) :
 colour(DEF_COLOUR), direction(DEF_DIRECT),
 shape(DEF_SHAPE)

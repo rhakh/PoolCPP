@@ -1,11 +1,13 @@
 #include "Star.hpp"
 
-Star::Star() : Object()
+Star::Star() :
+Object(STAR_COLOUR, BACKWARD_DIRECT, STAR_SHAPE, 0, 0, DEF_HP)
 {
 
 }
 
-Star::Star(int x_, int y_) : Object(x_, y_)
+Star::Star(int x_, int y_) :
+Object(STAR_COLOUR, BACKWARD_DIRECT, STAR_SHAPE, x_, y_, DEF_HP)
 {
     
 }

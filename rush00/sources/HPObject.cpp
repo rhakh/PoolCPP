@@ -1,11 +1,13 @@
 #include "HPObject.hpp"
 
-HPObject::HPObject() : Object()
+HPObject::HPObject() :
+Object(HP_COLOUR, BACKWARD_DIRECT, HP_SHAPE, 0, 0, DEF_HP)
 {
 
 }
 
-HPObject::HPObject(int x_, int y_) : Object(x_, y_)
+HPObject::HPObject(int x_, int y_) :
+Object(HP_COLOUR, BACKWARD_DIRECT, HP_SHAPE, x_, y_, DEF_HP)
 {
     
 }

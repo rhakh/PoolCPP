@@ -10,6 +10,7 @@ class Object {
 public:
     Object();
     Object(int x_, int y_);
+    Object(int colour_, int direction_, char shape_, int x_, int y_, int hp_);
     Object(const Object &src);
     virtual ~Object();
     virtual Object  &operator=(const Object &src);

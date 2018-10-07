@@ -31,7 +31,9 @@ typedef enum ObjColours_e {
     PLAYER_COLOUR,
     STAR_COLOUR,
     TEXT_COLOUR,
-	BULLET_COLOUR
+	BULLET_COLOUR,
+	BOSS_COLOUR,
+	HP_COLOUR
 }	ObjColours;
 
 typedef enum Directions_e {
@@ -52,6 +54,8 @@ typedef enum Shapes_e {
 
 typedef enum HealthPoints_e {
 	DEF_HP = 1,
+	PLAYER_HP = 3,
+	BOSS_HP = 5
 }	HealthPoints;
 
 typedef enum GameEvents_e {
