@@ -73,7 +73,7 @@ class TermWinTooSmallException : public std::exception {
 		TermWinTooSmallException(const TermWinTooSmallException &src);
 		~TermWinTooSmallException() throw();
 		TermWinTooSmallException	&operator=(const TermWinTooSmallException &rhs);
-		virtual const char		*what() const throw() {return ("Terminal size too small");};
+		virtual const char		*what() const throw();
 };
 
 class OutOfMemoryException : public std::exception {
@@ -82,7 +82,7 @@ class OutOfMemoryException : public std::exception {
 		OutOfMemoryException(const OutOfMemoryException &src);
 		~OutOfMemoryException() throw();
 		OutOfMemoryException	&operator=(const OutOfMemoryException &rhs);
-		virtual const char		*what() const throw() {return ("Out of memory");};
+		virtual const char		*what() const throw();
 };
 
 #endif // MAIN_HPP

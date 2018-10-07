@@ -1,6 +1,6 @@
 #include "Game.hpp"
 
-Game::Game(void) {
+Game::Game() {
 	initscr();
 	getmaxyx(stdscr, win_height, win_length);
 

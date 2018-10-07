@@ -10,9 +10,43 @@ int pl_height = 0;
 int pl_length = 0;
 int dt_height = 0;
 int dt_length = 0;
-int win_heigh = 0;
+int win_height = 0;
 int win_length = 0;
 unsigned fps = 0;
+
+TermWinTooSmallException::TermWinTooSmallException() {}
+
+TermWinTooSmallException::TermWinTooSmallException(const TermWinTooSmallException &src) {
+	*this = src;
+}
+
+TermWinTooSmallException::~TermWinTooSmallException() throw() {}
+
+TermWinTooSmallException	&TermWinTooSmallException::operator=(const TermWinTooSmallException &rhs) {
+	(void)(rhs);
+	return (*this);
+}
+
+const char		*TermWinTooSmallException::what() const throw() {
+	return ("Terminal size too small");
+}
+
+OutOfMemoryException::OutOfMemoryException() {}
+
+OutOfMemoryException::OutOfMemoryException(const OutOfMemoryException &src) {
+	*this = src;
+}
+
+OutOfMemoryException::~OutOfMemoryException() throw() {}
+
+OutOfMemoryException	&OutOfMemoryException::operator=(const OutOfMemoryException &rhs) {
+	(void)(rhs);
+	return (*this);
+}
+
+const char		*OutOfMemoryException::what() const throw() {
+	return ("Out of memory");
+}
 
 results	initGame() {
 	results	res;
