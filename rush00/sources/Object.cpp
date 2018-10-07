@@ -114,6 +114,8 @@ int     Object::processMove(int frn, int pressCode)
             if (random < 3)
                 return (ENEMY_SHOT);
         }
+        case BOSS_SHAPE:
+        case STAR_SHAPE:
         case BULLET_SHAPE: {
             // move by X
             if (this->direction == BACKWARD_DIRECT &&

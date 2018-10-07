@@ -307,7 +307,7 @@ unsigned int    timediff_usec(timeval t1, timeval t2) {
 
 int		Game::startGame(void) {
 
-	Player			*player = new Player(pl_height / 2, pl_length / 2);
+	Player			*player = new Player(PL_START_X + 1, pl_height / 2);
 	struct timeval	start;
 	struct timeval	now;
 
