@@ -98,34 +98,35 @@ int     Object::processMove(int frn, int pressCode)
     random = rand() % 100;
 
     switch (this->shape) {
+        case BOSS_SHAPE:
         case ENEMY_SHAPE: {
             if (frn % 2 == 0)
                 return (0);
-            // // move by Y
-            // if (random >= 0 && random < 2)
-            // {
-            //     if (this->y - 1 > PL_START_Y)
-            //         this->y--;
-            // } else if (random >= 2 && random < 4)
-            // {
-            //     if (this->y + 1 < pl_height)
-            //         this->y++;
-            // }
+         
+            // move by Y
+            if (random >= 0 && random < 3)
+            {
+                if (this->y - 1 > PL_START_Y)
+                    this->y--;
+            } else if (random >= 3 && random < 5)
+            {
+                if (this->y + 1 < pl_height)
+                    this->y++;
+            }
             if (random < 3)
                 return (ENEMY_SHOT);
         }
-        case BOSS_SHAPE:
+        case HP_SHAPE: {
+            if (frn % 5 == 0)
+                return (0);
+        }
         case STAR_SHAPE:
         case BULLET_SHAPE: {
             // move by X
-            if (this->direction == BACKWARD_DIRECT &&
-                (this->x - 1 > PL_START_X))
-            {
+            if (this->direction == BACKWARD_DIRECT && (this->x - 1 > PL_START_X)) {
                 this->x--;
-            } else if (this->direction == FORWARD_DIRECT &&
-                        (this->x + 2 < pl_length))
-            {
-                this->x++;    
+            } else if (this->direction == FORWARD_DIRECT && (this->x + 2 < pl_length)) {
+                this->x++;
             } else if (this->direction == BACKWARD_DIRECT && (this->x - 1 <= PL_START_X)) {
                 return (OBJECT_REACH_LEFT_SIDE);
             } else if (this->direction == FORWARD_DIRECT && (this->x + 2 >= pl_length)) {
