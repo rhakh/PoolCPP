@@ -61,7 +61,11 @@ results	initGame() {
 		init_pair(PLAYER_COLOUR, COLOR_GREEN, COLOR_BLACK);
 		init_pair(BULLET_COLOUR, COLOR_YELLOW, COLOR_BLACK);
 		init_pair(ENEMY_COLOUR, COLOR_RED, COLOR_BLACK);
+		init_pair(BOSS_COLOUR, COLOR_MAGENTA, COLOR_BLACK);
+		init_pair(TEXT_COLOUR, COLOR_CYAN, COLOR_BLACK);
 		init_pair(STAR_COLOUR, COLOR_WHITE, COLOR_BLACK);
+		init_pair(HP_COLOUR, COLOR_GREEN, COLOR_BLACK);
+
 		res.exitCode = g.startGame();
 		res.score = g.getScore();
 		res.time = g.getTimeInGame();

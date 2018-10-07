@@ -134,7 +134,7 @@ void	Game::processMoves() {
 					/* Player pressed space */
 					node_add_tail(
 						node_new(
-							new Bullet(obj->getY(), obj->getX() + 1, 1)
+							new Bullet(obj->getX() + 1, obj->getY(), FORWARD_DIRECT)
 						),
 						this->list
 					);
@@ -151,7 +151,7 @@ void	Game::processMoves() {
 			case ENEMY_SHOT : {
 					node_add_tail(
 						node_new(
-							new Bullet(obj->getY(), obj->getX() - 1, -1)
+							new Bullet(obj->getX() - 1, obj->getY(), BACKWARD_DIRECT)
 						),
 						this->list
 					);
@@ -222,19 +222,19 @@ void	Game::createEnemy() {
 	random = rand() % 100;
 	start_y = (rand() % (pl_height - 2)) + PL_START_Y + 1;
 	if (random < 3) {
-		node_add_tail(node_new(new Enemy(start_y, pl_length - 2)),
+		node_add_tail(node_new(new Enemy(pl_length - 2, start_y)),
 							this->list);
 	}
 	else if (this->frameNumber % (10 * fps) == 0) {
-		node_add_tail(node_new(new Boss(start_y, pl_length - 4)),
+		node_add_tail(node_new(new Boss(pl_length - 4, start_y)),
 							this->list);
 	}
 	else if (random < 10) {
-		node_add_tail(node_new(new Star(start_y, pl_length - 2)),
+		node_add_tail(node_new(new Star(pl_length - 2, start_y)),
 							this->list);
 	}
 	else if (this->frameNumber % 300 * fps == 0) {
-		node_add_tail(node_new(new HPObject(start_y, pl_length - 2)),
+		node_add_tail(node_new(new HPObject(pl_length - 2, start_y)),
 							this->list);
 	}
 }

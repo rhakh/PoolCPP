@@ -101,16 +101,16 @@ int     Object::processMove(int frn, int pressCode)
         case ENEMY_SHAPE: {
             if (frn % 2 == 0)
                 return (0);
-            // move by Y
-            if (random >= 0 && random < 2)
-            {
-                if (this->y - 1 > PL_START_Y)
-                    this->y--;
-            } else if (random >= 2 && random < 4)
-            {
-                if (this->y + 1 < pl_height)
-                    this->y++;
-            }
+            // // move by Y
+            // if (random >= 0 && random < 2)
+            // {
+            //     if (this->y - 1 > PL_START_Y)
+            //         this->y--;
+            // } else if (random >= 2 && random < 4)
+            // {
+            //     if (this->y + 1 < pl_height)
+            //         this->y++;
+            // }
             if (random < 3)
                 return (ENEMY_SHOT);
         }
