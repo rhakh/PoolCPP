@@ -11,6 +11,8 @@ public:
     Boss(const Boss &src);
     ~Boss();
     Boss   &operator=(const Boss &src);
+
+    int     processMove(int frn, int pressCode);
 };
 
 #endif // BOSS_HPP

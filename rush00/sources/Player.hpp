@@ -11,6 +11,8 @@ public:
     Player(const Player &src);
     ~Player();
     Player   &operator=(const Player &src);
+
+    int     processMove(int frn, int pressCode);
 };
 
 #endif // PLAYER_HPP

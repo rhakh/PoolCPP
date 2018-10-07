@@ -11,6 +11,8 @@ public:
     Bullet(const Bullet &src);
     ~Bullet();
     Bullet   &operator=(const Bullet &src);
+
+    int     processMove(int frn, int pressCode);
 };
 
 #endif // BULLET_HPP

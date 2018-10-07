@@ -11,6 +11,8 @@ public:
     Enemy(const Enemy &src);
     ~Enemy();
     Enemy   &operator=(const Enemy &src);
+
+    int     processMove(int frn, int pressCode);
 };
 
 #endif // ENEMY_HPP

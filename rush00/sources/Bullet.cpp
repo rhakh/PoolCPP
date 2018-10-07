@@ -27,3 +27,7 @@ Bullet   &Bullet::operator=(const Bullet &src)
     Object::operator=(src);
     return (*this);
 }
+
+int     Bullet::processMove(int frn, int pressCode) {
+    return (Object::processMove(frn, pressCode));
+}

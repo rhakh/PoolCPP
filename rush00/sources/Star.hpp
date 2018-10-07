@@ -11,6 +11,8 @@ public:
     Star(const Star &src);
     ~Star();
     Star   &operator=(const Star &src);
+
+    int     processMove(int frn, int pressCode);
 };
 
 #endif // STAR_HPP

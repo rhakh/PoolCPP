@@ -27,3 +27,12 @@ HPObject   &HPObject::operator=(const HPObject &src)
     Object::operator=(src);
     return (*this);
 }
+
+int     HPObject::processMove(int frn, int pressCode)
+{
+    (void)(pressCode);
+    if (frn % 5 == 0)
+        return (0);
+
+    return (Object::processMove(frn, pressCode));
+}

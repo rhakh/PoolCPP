@@ -27,3 +27,8 @@ Star   &Star::operator=(const Star &src)
     Object::operator=(src);
     return (*this);
 }
+
+int     Star::processMove(int frn, int pressCode)
+{
+    return (Object::processMove(frn, pressCode));
+}
