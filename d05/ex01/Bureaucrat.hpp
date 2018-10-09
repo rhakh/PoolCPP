@@ -4,11 +4,14 @@
 #include <string>
 #include <iostream>
 
+#include "Form.hpp"
+class Form;
+
 #define HIGHEST_GRADE	1
 #define LOWEST_GRADE	150
 
-#define ERROR_GRADE_TOO_LOW		"Error: Bureaucrat grade to low"
-#define ERROR_GRADE_TOO_HIGHT	"Error: Bureaucrat grade to hight"
+#define ERROR_GRADE_TOO_LOW		"grade to low"
+#define ERROR_GRADE_TOO_HIGHT	"grade to hight"
 
 #define UNUSED(var)			{(void)(var);}
 
@@ -27,6 +30,8 @@ public:
 	int				getGrade() const;
 	void			incGrade(int value);
 	void			decGrade(int value);
+
+	void			signForm(Form &from);
 
 	class GradeTooHighException : public std::exception {
 	public:

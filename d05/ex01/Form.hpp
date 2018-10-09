@@ -3,20 +3,19 @@
 
 #include <string>
 #include <iostream>
+#include "Bureaucrat.hpp"
+class Bureaucrat;
 
-#define HIGHEST_GRADE	1
-#define LOWEST_GRADE	150
-
-#define ERROR_GRADE_TOO_LOW		"Error: Bureaucrat grade to low"
-#define ERROR_GRADE_TOO_HIGHT	"Error: Bureaucrat grade to hight"
+#define ERROR_GRADE_TOO_LOW		"grade to low"
+#define ERROR_GRADE_TOO_HIGHT	"grade to hight"
 
 #define UNUSED(var)			{(void)(var);}
 
 class Form {
-	bool	isSigned;
-	const int		gradeRequiredToSign;
-	const int		gradeRequiredToExecute;
 	const std::string	name;
+	const int		signGrade;
+	const int		execGrade;
+	bool	isSigned;
 
 public:
 	Form();
@@ -24,13 +23,13 @@ public:
 	~Form();
 	Form		&operator=(const Form &rhs);
 
-	Form(const std::string &_name, int _grade);
+	Form(const std::string &_name, int _signGrade, int _execGrade);
 	std::string		getName() const;
 	int				getGradeToSign() const;
 	int				getGradeToExecute() const;
 	bool			getSigned() const;
 
-	void			beSigned();
+	void			beSigned(Bureaucrat &br);
 
 	class GradeTooHighException : public std::exception {
 	public:
