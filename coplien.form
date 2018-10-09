@@ -31,3 +31,5 @@ Class	&Class::operator=(const Class &src) {
 
 
 $ clang++ -Wall -Wextra -Werror 
+
+#not done d04, d05
