@@ -6,7 +6,7 @@ else
 CXX=clang++
 endif
 
-NAME = convert
+NAME = serialize
 
 #FLAGS =  -Wall -Wextra `pkg-config --cflags --libs ncurses` -std=c++98 # add -Werror
 
@@ -17,8 +17,6 @@ OBJDIR = obj/
 SRCDIR = src/
 
 _SRC =	main.cpp \
-		String.cpp \
-		Exceptions.cpp \
 
 SRC = $(addprefix $(SRCDIR), $(_SRC))
 
