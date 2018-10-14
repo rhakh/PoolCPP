@@ -241,26 +241,29 @@ void ncWindow::refreshWindows() {
 void ncWindow::drowWindows() {
 	std::string	line;
 
+	// Borders
+	wattron(this->net_win, COLOR_PAIR(BORDER_COLOR) | A_BOLD);
 	setBorders();
+	wattroff(this->net_win, COLOR_PAIR(BORDER_COLOR) | A_BOLD);
 
 	// Hostname
-	wattron(this->host_win, COLOR_PAIR(TEXT_COLOR) | A_BOLD);
+	wattron(this->host_win, COLOR_PAIR(HOST_COLOR) | A_BOLD);
 	line = "Hostname: " + getHostname();
 	mvwaddstr(this->host_win, 1, 2, line.c_str());
 	line = "Username: " + getUsername();
 	mvwaddstr(this->host_win, 2, 2, line.c_str());
-	wattroff(this->host_win, COLOR_PAIR(TEXT_COLOR) | A_BOLD);
+	wattroff(this->host_win, COLOR_PAIR(HOST_COLOR) | A_BOLD);
 
 	// Date & time
-	wattron(this->date_win, COLOR_PAIR(TEXT_COLOR) | A_BOLD);
+	wattron(this->date_win, COLOR_PAIR(DATE_COLOR) | A_BOLD);
 	line = "Date: " + getDate();
 	mvwaddstr(this->date_win, 1, 2, line.c_str());
 	line = "Time: " + getTime();
 	mvwaddstr(this->date_win, 2, 2, line.c_str());
-	wattroff(this->date_win, COLOR_PAIR(TEXT_COLOR) | A_BOLD);
+	wattroff(this->date_win, COLOR_PAIR(DATE_COLOR) | A_BOLD);
 
 	// CPU
-	wattron(this->cpu_win, COLOR_PAIR(TEXT_COLOR) | A_BOLD);
+	wattron(this->cpu_win, COLOR_PAIR(CPU_COLOR) | A_BOLD);
 	line = "CPU model: " + getCPUModel();
 	mvwaddstr(this->cpu_win, 1, 2, line.c_str());
 	line = "CPU clock speed Hz: " + getCPUClockSpeed();
@@ -269,19 +272,19 @@ void ncWindow::drowWindows() {
 	mvwaddstr(this->cpu_win, 3, 2, line.c_str());
 	line = "CPU activity " + getCPUActivity();
 	mvwaddstr(this->cpu_win, 4, 2, line.c_str());
-	wattroff(this->cpu_win, COLOR_PAIR(TEXT_COLOR) | A_BOLD);
+	wattroff(this->cpu_win, COLOR_PAIR(CPU_COLOR) | A_BOLD);
 
 	// RAM
-	wattron(this->ram_win, COLOR_PAIR(TEXT_COLOR) | A_BOLD);
+	wattron(this->ram_win, COLOR_PAIR(RAM_COLOR) | A_BOLD);
 	line = "RAM: " + getRAM();
 	mvwaddstr(this->ram_win, 1, 2, line.c_str());
-	wattroff(this->ram_win, COLOR_PAIR(TEXT_COLOR) | A_BOLD);
+	wattroff(this->ram_win, COLOR_PAIR(RAM_COLOR) | A_BOLD);
 
 	// NET
-	wattron(this->net_win, COLOR_PAIR(TEXT_COLOR) | A_BOLD);
+	wattron(this->net_win, COLOR_PAIR(NET_COLOR) | A_BOLD);
 	line = "Network: " + getNetworkThroughput(); 
 	mvwaddstr(this->net_win, 1, 2, line.c_str());
-	wattroff(this->net_win, COLOR_PAIR(TEXT_COLOR) | A_BOLD);
+	wattroff(this->net_win, COLOR_PAIR(NET_COLOR) | A_BOLD);
 }
 
 void ncWindow::printWindow()

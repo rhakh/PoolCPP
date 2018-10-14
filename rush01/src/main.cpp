@@ -11,7 +11,12 @@ void	initWin() {
 		ncWindow win;
 
 		start_color();
-		init_pair(TEXT_COLOR, COLOR_CYAN, COLOR_BLACK);
+		init_pair(BORDER_COLOR, COLOR_GREEN, COLOR_BLACK);
+		init_pair(HOST_COLOR, COLOR_YELLOW, COLOR_BLACK);
+		init_pair(DATE_COLOR, COLOR_RED, COLOR_BLACK);
+		init_pair(CPU_COLOR, COLOR_MAGENTA, COLOR_BLACK);
+		init_pair(RAM_COLOR, COLOR_CYAN, COLOR_BLACK);
+		init_pair(NET_COLOR, COLOR_WHITE, COLOR_BLACK);
 		win.startWindow();
 	}
 	catch (std::exception &e) {

@@ -18,7 +18,12 @@ extern int  win_length;
 extern unsigned fps;
 
 typedef enum ObjColors_e {
-	TEXT_COLOR = 1,
+	BORDER_COLOR = 1,
+	HOST_COLOR,
+	DATE_COLOR,
+	CPU_COLOR,
+	RAM_COLOR,
+	NET_COLOR
 }	ObjColors;
 
 #endif
