@@ -1,31 +1,12 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: apelykh <apelykh@student.42.fr>            +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2018/10/07 23:17:13 by apelykh           #+#    #+#              #
-#    Updated: 2018/10/07 23:33:05 by apelykh          ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
-
 CXX=clang++
-NAME = ft_retro
+NAME = ft_gkrellm
 FLAGS =  -Wall -Wextra -Werror -I include
 OBJDIR = obj/
 SRCDIR = src/
-_SRC =	Boss.cpp \
-		Enemy.cpp \
-		Game.cpp \
-		HPObject.cpp \
+_SRC =	ncWindow.cpp \
 		main.cpp \
-		node_t.cpp \
-		Object.cpp \
-		Player.cpp \
-		Star.cpp \
-		Bullet.cpp \
 		Exceptions.cpp \
+		SysInfo.cpp \
 
 SRC = $(addprefix $(SRCDIR), $(_SRC))
 OBJ = $(addprefix $(OBJDIR),$(_SRC:.cpp=.o))
