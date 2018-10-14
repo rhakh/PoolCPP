@@ -241,10 +241,7 @@ void ncWindow::refreshWindows() {
 void ncWindow::drowWindows() {
 	std::string	line;
 
-	// Borders
-	wattron(this->net_win, COLOR_PAIR(BORDER_COLOR) | A_BOLD);
 	setBorders();
-	wattroff(this->net_win, COLOR_PAIR(BORDER_COLOR) | A_BOLD);
 
 	// Hostname
 	wattron(this->host_win, COLOR_PAIR(HOST_COLOR) | A_BOLD);
