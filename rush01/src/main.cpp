@@ -6,11 +6,6 @@
 #include "main.hpp"
 #include "ncWindow.hpp"
 
-int win_height = 0;
-int win_length = 0;
-unsigned fps = FPS;
-
-
 void	initWin() {
 	try {
 		ncWindow win;

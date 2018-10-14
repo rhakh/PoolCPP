@@ -4,7 +4,7 @@
 #include <exception>
 
 // Playground window
-#define MIN_WIN_HEIGHT	25
+#define MIN_WIN_HEIGHT	30
 #define MIN_WIN_LENGTH	80
 #define WIN_START_Y	    0
 #define WIN_START_X	    0
